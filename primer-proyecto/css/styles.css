@@ -3,3 +3,11 @@ body {
  font-family: 'Montserrat', sans-serif;
  background-color: #ffffad;
 }
+
+#container{
+ width: 70%;
+ margin: 0 auto;
+ padding: 1em;
+ text-align: center;
+ border: 1px solid #333;
+}
