@@ -1,6 +1,7 @@
 body {
  color: darkmagenta;
- font-family: 'Montserrat', sans-serif;
+ /* font-family: 'Montserrat', sans-serif; */
+ font-family: 'Courier New', Courier, monospace;
  background-color: #ffffad;
 }
 
