@@ -1,13 +1,31 @@
 body {
- color: darkmagenta;
+ color: #eee;
  font-family: 'Montserrat', sans-serif;
- background-color: #ffffad;
 }
 
 #container{
+background-color: #4f6377;
  width: 70%;
  margin: 0 auto;
- padding: 1em;
+ padding: 0;
  text-align: center;
  border: 1px solid #333;
+}
+
+#cabecera {
+	background-color: #345;
+	color: #fff;
+	font-weight: bold;
+	text-align: left;
+	box-shadow: 5px 0px 28px -1px rgba(1,93,255,0.5);
+	font-size: 28px;
+	margin: 0;
+	padding: 5px;
+	padding-left: 10px;
+}
+
+#tagline {
+	font-size: 16px;
+	font-weight: normal;
+	padding-left: 20px;
 }
