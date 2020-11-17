@@ -88,3 +88,10 @@ git fetch --> si quiero traer las actualizaciones si alguien hizo algún cambio,
 git merge --> luego del fetch y para que lo traiga al directorio de trabajo (a mis archivos).
 
 git pull --> fusiona git fetch y git merge. De esa manera siempre tengo una copia actualizada de lo último que pasó en el repositorio.
+
+*Clase 15 | Ramas o branches de Git
+
+Cuando creas una nueva rama, creas una copia del último commit en otro lado.
+git branch <nombre_nueva_rama> --> creas la nueva rama, pero seguis apuntando al master
+
+git checkout <nombre_nueva_rama> --> te moves a la nueva rama
