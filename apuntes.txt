@@ -95,3 +95,30 @@ Cuando creas una nueva rama, creas una copia del último commit en otro lado.
 git branch <nombre_nueva_rama> --> creas la nueva rama, pero seguis apuntando al master
 
 git checkout <nombre_nueva_rama> --> te moves a la nueva rama
+
+git merge --> para fusionar una rama nueva con la master, siempre el merge se ejecuta desde la rama master (o mejor dicho la que queres que
+				  siga siendo la principal, porque sino, la rama pasa a ser la master), queres poner el HEAD en master.
+
+* Clase 22 | Tags y versiones en Git y GitHub
+
+con el comando git log podes ver la historia del proyecto.
+	^ --all --> para ver tooooda la historia
+	^ --all --graph --> te muestra además las rayitas que muestran la fusión de branches
+	^ --all --graph --decorate --oneline --> de un vistazo te muestra toda la historia bien resumida y gráfica, hice un alias *arbolgit*
+
+(para hacer un alias en linux --> alias nombreAlias="el comando larguiiisimo")
+
+Tags
+Son muy utiles en GitHub, porque podes mostrar a otres usuaries las versiones que fueron ocurriendo
+--> creación -> git tag -a v0.1(versión) -m "mensaje" b7e9a29(nº que identifica el commit)
+--> conocer los tags del proyecto -> git tag
+--> saber a qué commit se relaciona -> git show-ref --tags
+--> enviarlos al repositorio remoto -> git push origin -tags
+--> borrar un tag -> git tag -d version, aunque hagas el push tiende a quedar en GitHub,
+							entonces tenes que hacer --> git push origin :refs/tags/v1.1
+
+Clase 23 | Manejo de ramas en GitHub
+
+git show-branch --> muestra las ramas y su historia básica
+git show-branch --all --> da mayor detalle
+gitk --> abre un software que muestra un entorno MUY visual de lo que ocurre en git
