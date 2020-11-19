@@ -33,3 +33,12 @@ background-color: #4f6377;
 #post{
 	padding: 0 15px;
 }
+
+footer {
+	background-color:#2a3a4a;
+}
+.footer--title{
+	font-size: 14px;
+	padding: 5px;
+	color: #728eaa;
+}
