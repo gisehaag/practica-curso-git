@@ -47,6 +47,12 @@ body {
 	padding: 0 15px;
 }
 
+#post img {
+	width: 400px;
+	text-align: center;
+	border: 2px #def solid;
+}
+
 footer {
 	background-color:#2a3a4a;
 }

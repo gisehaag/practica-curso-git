@@ -122,3 +122,12 @@ Clase 23 | Manejo de ramas en GitHub
 git show-branch --> muestra las ramas y su historia básica
 git show-branch --all --> da mayor detalle
 gitk --> abre un software que muestra un entorno MUY visual de lo que ocurre en git
+git push origin <nombreRama> --> para enviar la rama al repositorio remoto (GitHub)
+
+Clase 24 | Configurar múltiples colaboradores en un repositorio de GitHub
+
+git clone <urlRepositorio> --> clona en local el repositorio remoto
+Luego, podes añadir con git remote <upstream> <url> una nueva fuente del repositorio, se sumaría a <origin> y se
+puede usar de igual manera
+
+
