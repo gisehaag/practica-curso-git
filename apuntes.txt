@@ -130,4 +130,27 @@ git clone <urlRepositorio> --> clona en local el repositorio remoto
 Luego, podes añadir con git remote <upstream> <url> una nueva fuente del repositorio, se sumaría a <origin> y se
 puede usar de igual manera
 
+Clase 33 | GitHub Pages
+
+Está la posibilidad de hostear un sitio en el servidor de GitHub.
+Se crea un repositorio con el nombre que el <userName>.github.io, tiene que ser público.
+Se debe crear un index.html y luego subirlo al repositorio remoto.
+
+Hay que configurar que sea éste repo el que carga GitHub pages, en settings, en la opcion de github pages, elegis la source.
+la url del sitio será <userName>.github.io
+
+
+Clase 34 |
+
+git rebase --> reescribe la historia del proyecto. Podría usarse en entorno local, pero es muy mala práctica hacerlo en los
+repositorios remotos.
+
+Se hace estando en la rama que quiero pegar, git rebase main(master, o la rama a la que quieras).
+
+**Simpre primero se le hace un rebase a la rama que va a desaparecer (la que cambia), y luego se le hace rebase a la rama principal (la final).
+los problemas son:
+ - no queda historia
+ - no se sabe quien hizo qué
+ - si la rama principal avanzó mucho pueden surgir muchos conflictos
+
 
