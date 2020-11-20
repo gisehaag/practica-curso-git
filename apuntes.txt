@@ -117,20 +117,20 @@ Son muy utiles en GitHub, porque podes mostrar a otres usuaries las versiones qu
 --> borrar un tag -> git tag -d version, aunque hagas el push tiende a quedar en GitHub,
 							entonces tenes que hacer --> git push origin :refs/tags/v1.1
 
-Clase 23 | Manejo de ramas en GitHub
+* Clase 23 | Manejo de ramas en GitHub
 
 git show-branch --> muestra las ramas y su historia básica
 git show-branch --all --> da mayor detalle
 gitk --> abre un software que muestra un entorno MUY visual de lo que ocurre en git
 git push origin <nombreRama> --> para enviar la rama al repositorio remoto (GitHub)
 
-Clase 24 | Configurar múltiples colaboradores en un repositorio de GitHub
+* Clase 24 | Configurar múltiples colaboradores en un repositorio de GitHub
 
 git clone <urlRepositorio> --> clona en local el repositorio remoto
 Luego, podes añadir con git remote <upstream> <url> una nueva fuente del repositorio, se sumaría a <origin> y se
 puede usar de igual manera
 
-Clase 33 | GitHub Pages
+* Clase 33 | GitHub Pages
 
 Está la posibilidad de hostear un sitio en el servidor de GitHub.
 Se crea un repositorio con el nombre que el <userName>.github.io, tiene que ser público.
@@ -140,7 +140,7 @@ Hay que configurar que sea éste repo el que carga GitHub pages, en settings, en
 la url del sitio será <userName>.github.io
 
 
-Clase 34 |
+* Clase 34 | Rebase, reorganizando el trabajo realizado
 
 git rebase --> reescribe la historia del proyecto. Podría usarse en entorno local, pero es muy mala práctica hacerlo en los
 repositorios remotos.
@@ -152,5 +152,67 @@ los problemas son:
  - no queda historia
  - no se sabe quien hizo qué
  - si la rama principal avanzó mucho pueden surgir muchos conflictos
+
+* Clase 35 | Stash
+
+git stash --> sirve para guardar cambios temporales, pero que aún no están listos para un commit.
+git stash list --> muestra todos los WIP (work in progress)
+git stash pop --> vuelve a mostrar el cambio temporal
+git stash branch <nombre_nueva_rama> --> manda los cambios temporales a una nueva rama, y hace un checkout a esa nueva rama
+git stash drop --> borras los cambios temporales que hayas guardado
+
+* Clase 36 | Git Clean
+Este comando sirve para limpiar archivos que van quedando y no corresponden al proyecto.
+git clean --dry-run --> muestra lo que se va a borrar sin borrarlo.
+git clean -f --> si borra todos los archivos, no borra carpetas, así que hay que hacerlo de forma manual y tampoco archivos que
+					  no sean indexables (las excepciones de .gitignore)
+
+* Clase 36 | Cherry-pick
+El uso de este comando es una mala práctica porque de alguna manera estas reconstruyendo la historia.
+git cherry-pick <IdCommit> --> permite traer un commit que está en una rama a la rama donde estoy trabajando (como si fuera un merge).
+										  si luego se hace un merge con la rama donde estaba ese commit va a generar un conflicto porque hay
+										  líneas similares que fueron editadas.
+
+* Clase 37
+git commit -amend --> permite añadir cambios que hayan sido agregados (git add <fileName>), a un commit inmediatamente anterior que se
+							 haya ejecutado. No crea un commit nuevo. Lo que si te permite es cambiar el mensaje del commit.
+
+* Clase 39
+git reflog --> es similar a un git log, pero agrega información adicional que permitiría eventualmente realizar un RESET
+
+* Clase 40
+git grep <quéBusco> --> para hacer busquedas dentro de los archivos del proyecto
+								con -n, además te muestra la línea donde encuentra el resultado de la búsqueda
+								con -c, cuenta la cantidad de veces que aparece el resultado
+								para buscar una etiqueta HTML, va entre comillas "<p>"
+git log -S <quéBusco> --> busca dentro de los commits
+
+* Clase 41 | recursos colaborativos
+git shortlog --> muestra los commits por persona
+git shortlog -sn --> muestra la cantidad de commits por persona
+git shortlog -sn --all --> muestra incluso los commits borrados
+git shortlog -sn --all --no-merges--> no incluye merges en la cantidad mostrada
+
+git config --global alias.<nombreAlias> <comando> --> para crear un alias
+
+git blame <nombreArchivo> --> para ver quién hizo cada línea
+git blame -c <nombreArchivo> --> lo mismo un poco mejor indentado
+git blame <nombreArchivo> -L<n1>,<n2> --> donde n1 y n2 dan el intervalo de líneas
+
+git branch -r --> para ver las ramas remotas
+git branch -a --> para ver TODAS las ramas locales y remotas
+
+en GitHub con el comando Insights también ves estadísticas similares
+
+seguir con GitLab
+
+
+
+
+
+
+
+
+
 
 
